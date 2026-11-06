@@ -1,4 +1,0 @@
-Sube fotos propias o autorizadas a esta carpeta desde GitHub: Add file > Upload files.
-En catalogo.js usa imagen: 'imagenes/nombre.webp'.
-Recomendación: 850 x 850 px, WEBP o JPG, menos de 300 KB.
-Las fotos de esta versión son locales. Referencias en FUENTES_IMAGENES.md del paquete.
