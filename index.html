@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0c0c0c">
+  <meta name="description" content="PRIMAL Store: pide equipo de boxeo, suplementos y fitness desde Medellín. Selecciona y solicita por WhatsApp; confirmamos envío antes de pagar.">
+  <link rel="canonical" href="https://primalproducts.com.co/Store/">
+  <link rel="icon" href="imagenes/primal-icon.png" type="image/png">
+  <meta property="og:title" content="PRIMAL Store | Equípate para el próximo round">
+  <meta property="og:description" content="Boxeo, suplementos y fitness. Prepara tu pedido y confirma por WhatsApp antes de pagar.">
+  <meta property="og:image" content="https://primalproducts.com.co/primal-share.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>PRIMAL Store | Boxeo, suplementos y fitness</title>
+  <script defer src="catalogo.js"></script>
+  <script defer src="pedido.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#productos">Ir a los productos</a>
+  <header class="header">
+    <div class="shell header-in">
+      <a class="brand" href="https://primalproducts.com.co/" aria-label="Volver a PRIMAL Products">
+        <img src="imagenes/primal-icon.png" alt="Icono original PRIMAL Products" width="43" height="43">
+        <span><b>PRIMAL<span class="red"> STORE</span></b><small>BY PRIMAL PRODUCTS</small></span>
+      </a>
+      <nav class="topnav" aria-label="Navegación principal">
+        <a href="https://primalproducts.com.co/" id="backLink">PRIMAL Products</a>
+        <a href="https://primalproducts.com.co/Primal-Boxing/" id="boxingLink">PRIMAL Boxing</a>
+      </nav>
+      <div class="header-actions">
+        <button class="lang-btn" id="langBtn" type="button" aria-label="Change language">EN</button>
+        <button class="cart-btn" id="openCart" aria-controls="drawer" aria-expanded="false" type="button" aria-label="Ver pedido">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 4h2l2.4 11.3h11.9L22 7H6"/><circle cx="9" cy="20" r="1.2"/><circle cx="19" cy="20" r="1.2"/></svg>
+          <span id="cartLabel">Mi pedido</span><span id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <noscript><p class="shell">Activa JavaScript para consultar el catálogo y preparar tu pedido.</p></noscript>
+    <section class="hero shell" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="red-line"></span> PRIMAL PRODUCTS / STORE</div>
+        <h1 id="heroTitle">EQUÍPATE PARA<br><em>EL PRÓXIMO ROUND.</em></h1>
+        <p id="heroText">Boxeo, suplementos y fitness. Elige lo que necesitas y solicita tu pedido. Nosotros confirmamos los detalles antes de que pagues.</p>
+        <a href="#productos" class="brush primary" id="exploreBtn">VER PRODUCTOS <span aria-hidden="true">↓</span></a>
+        <div class="hero-fine" id="heroFine">Sin pagos en esta web · Pedidos por WhatsApp · Envío por confirmar</div>
+      </div>
+      <div class="hero-feature" aria-hidden="true">
+        <span class="feature-label">PRIMAL / GEAR</span>
+        <div class="hero-ring"></div>
+        <img src="imagenes/box-guantes-12.webp" alt="" width="330" height="330">
+        <div class="feature-foot"><span>TRAIN HARD.<br>GO FURTHER.</span><b>12 OZ</b></div>
+      </div>
+    </section>
+    <section class="how shell" aria-labelledby="howTitle">
+      <h2 id="howTitle">ASÍ DE FÁCIL</h2>
+      <div class="how-steps">
+        <div><span>01</span><p id="step1">Escoge tus productos</p></div>
+        <div><span>02</span><p id="step2">Prepara tu solicitud</p></div>
+        <div><span>03</span><p id="step3">Confirmamos entrega y pago por WhatsApp</p></div>
+      </div>
+    </section>
+    <section id="productos" class="shop-section shell">
+      <div class="section-heading"><div><div class="eyebrow">PRIMAL STORE</div><h2 id="catalogTitle">ELIGE TU EQUIPO.</h2></div><p id="catalogSub">12 productos elegidos para empezar. Pide sin registro y sin pagar en esta página.</p></div>
+      <div class="shop-tools">
+        <div class="filters" id="filters" aria-label="Filtrar por categoría">
+          <button type="button" class="filter active" data-cat="todos">TODOS <span>12</span></button>
+          <button type="button" class="filter" data-cat="boxeo">BOXEO <span>4</span></button>
+          <button type="button" class="filter" data-cat="suplementos">SUPLEMENTOS <span>4</span></button>
+          <button type="button" class="filter" data-cat="fitness">FITNESS <span>4</span></button>
+        </div>
+        <label class="search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7.2"/><path d="m16 16 5.2 5.2"/></svg><input id="search" type="search" placeholder="Buscar un producto" aria-label="Buscar productos"></label>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+      <div id="emptyProducts" class="empty-products" hidden>No encontramos productos con esa búsqueda.</div>
+    </section>
+    <section class="notice shell">
+      <div><span class="notice-line"></span><h2 id="noticeTitle">SOLICITA. CONFIRMA. ENTRENA.</h2><p id="noticeBody">En esta página preparas una solicitud, no realizas un pago. Confirmaremos por WhatsApp disponibilidad, costo de envío, tiempo de entrega y total antes de cerrar la compra.</p></div>
+      <a href="https://primalproducts.com.co/Primal-Boxing/" class="brush secondary" id="trainingCta">ENTRENAR CON PRIMAL BOXING</a>
+    </section>
+  </main>
+  <footer class="footer"><nav class="shell legal-nav" aria-label="Información de compra"><a href="legal.html#vendedor">Vendedor y contacto</a><a href="legal.html#compra">Condiciones de compra</a><a href="legal.html#devoluciones">Garantías y devoluciones</a><a href="legal.html#privacidad">Privacidad</a><a href="legal.html#reclamos">Peticiones y reclamos</a><a href="https://www.sic.gov.co/" target="_blank" rel="noopener noreferrer">Protección al consumidor · SIC</a></nav><div class="shell footer-in"><span>2026 PRIMALproducts</span><a href="https://primalproducts.com.co/" id="footerBack">Volver a PRIMAL Products</a></div></footer>
+
+  <div id="overlay" class="overlay" hidden></div>
+  <aside id="drawer" class="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" aria-hidden="true" inert tabindex="-1">
+    <div class="drawer-head"><div><small>PRIMAL STORE</small><h2 id="drawerTitle">TU PEDIDO</h2></div><button type="button" class="close" id="closeCart" aria-label="Cerrar pedido">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div id="copyPanel" class="copy-panel" hidden><label for="orderSummary" id="summaryLabel">Resumen para copiar</label><textarea id="orderSummary" readonly rows="6"></textarea></div>
+    <div class="drawer-bottom">
+      <div class="total"><span id="subtotalLabel">Subtotal</span><b id="subtotal">$0</b></div>
+      <small id="shippingCopy">El envío se confirma antes del pago.</small>
+      <a class="checkout-wa" id="checkout" target="_blank" rel="noopener noreferrer" aria-describedby="checkoutHelp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0 12 12 0 0 0 1.6 18L0 24l6.2-1.6A12 12 0 0 0 24 12c0-3.2-1.2-6.2-3.5-8.5ZM12 22a10 10 0 0 1-5.1-1.4l-.4-.2-3.7 1 1-3.6-.3-.4A10 10 0 1 1 12 22Zm5.5-7.4c-.3-.1-1.8-.9-2.1-1-.3-.1-.5-.1-.7.2-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6.3-.5c.1-.2 0-.4 0-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.3 3.1c.1.2 2.1 3.3 5.1 4.6.7.3 1.3.5 1.7.6.7.2 1.3.2 1.8.1.5-.1 1.8-.8 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4Z"/></svg>
+        <span><strong id="checkoutTitle">COMPRAR POR WHATSAPP</strong><small id="checkoutSubtitle">Tu pedido listo. Hablemos.</small></span><span class="cta-arrow" aria-hidden="true">→</span>
+      </a>
+      <small id="checkoutHelp" class="checkout-help" role="status"></small>
+      <p class="checkout-legal" id="checkoutLegal">El mensaje llevará los productos de tu carrito. Revisa las <a href="legal.html#compra" target="_blank" rel="noopener">condiciones</a> y el <a href="legal.html#privacidad" target="_blank" rel="noopener">aviso de privacidad</a>.</p>
+      <div class="order-actions"><button id="copyOrder" type="button">Copiar pedido</button><button id="downloadOrder" type="button">Descargar resumen</button><button id="clearCart" type="button">Vaciar pedido</button></div>
+    </div>
+  </aside>
+  <button id="mobileCart" class="mobile-cart" type="button" hidden><span id="mobileCartText">Ver mi pedido</span><b id="mobileTotal"></b><span aria-hidden="true">→</span></button>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
